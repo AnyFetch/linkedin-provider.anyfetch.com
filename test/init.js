@@ -5,7 +5,7 @@ require('should');
 
 var app = require('../app.js');
 
-describe.skip("GET /init/connect", function () {
+describe("GET /init/connect", function () {
   it("should redirect to PROVIDER", function (done) {
     request(app).get('/init/connect?code=123')
       .expect(302)
