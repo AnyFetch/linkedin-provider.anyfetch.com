@@ -22,7 +22,7 @@
     "PROVIDER"
   ],
   "dependencies": {
-    "async": "0.2.x",
+    "async": "0.8.x",
     "request": "2.34.x",
     "sspawn": "0.1.1",
     "anyfetch-provider": "0.x.x",
@@ -30,9 +30,9 @@
   },
   "devDependencies": {
     "mocha": "1.18.x",
-    "should": "3.2.x",
-    "supertest": "0.10.x",
-    "jshint": "2.4.x"
+    "should": "3.3.x",
+    "supertest": "0.12.x",
+    "jshint": "2.5.x"
   },
   "licence": "MIT",
   "engines": {
