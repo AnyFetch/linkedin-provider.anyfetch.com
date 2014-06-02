@@ -3,4 +3,4 @@
 require('should');
 var config = require('../config/configuration.js');
 
-// Check datas are retrieved from PROVIDER
+// Check data are retrieved from PROVIDER
