@@ -28,7 +28,7 @@
   "devDependencies": {
     "mocha": "1.18.x",
     "should": "3.3.x",
-    "supertest": "0.12.x",
+    "supertest": "0.12.x"
   },
   "licence": "MIT",
   "engines": {
