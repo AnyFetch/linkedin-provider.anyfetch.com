@@ -24,11 +24,10 @@ if(node_env === "production") {
 module.exports = {
   env: node_env,
   port: process.env.PORT || default_port,
-  workers: process.env.WORKERS || 1, // Number of workers for upload tasks
 
   // Optional params
 
-  connect_url: process.env.PROVIDER_CONNECT_URL, // Callback URI for anyfetch
-  anyfetch_id: process.env.PROVIDER_ANYFETCH_ID,
-  anyfetch_secret: process.env.PROVIDER_ANYFETCH_SECRET,
+  providerUrl: process.env.PROVIDER_URL,
+  appid: process.env.PROVIDER_ANYFETCH_ID,
+  appSecret: process.env.PROVIDER_ANYFETCH_SECRET,
 };
