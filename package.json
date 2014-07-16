@@ -20,15 +20,15 @@
     "PROVIDER"
   ],
   "dependencies": {
-    "async": "0.8.x",
-    "request": "2.34.x",
-    "anyfetch-provider": "^1.0.10",
+    "async": "0.9.x",
+    "request": "2.37.x",
+    "anyfetch-provider": "^1.0.22",
     "dotenv": "^0.4.0"
   },
   "devDependencies": {
-    "mocha": "1.18.x",
-    "should": "3.3.x",
-    "supertest": "0.12.x"
+    "mocha": "1.20.x",
+    "should": "4.0.x",
+    "supertest": "0.13.x"
   },
   "licence": "MIT",
   "engines": {
