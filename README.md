@@ -4,4 +4,4 @@
 Git clone this repo for boilerplate code on your provider.
 Read the documentation from the library on https://github.com/Papiel/anyfetch-provider.
 
-Support: `support@papiel.fr`.
+Support: `support@anyfetch.com`.
