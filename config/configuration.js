@@ -28,6 +28,6 @@ module.exports = {
   // Optional params
 
   providerUrl: process.env.PROVIDER_URL,
-  appid: process.env.PROVIDER_ANYFETCH_ID,
-  appSecret: process.env.PROVIDER_ANYFETCH_SECRET,
+  appId: process.env.ANYFETCH_API_ID,
+  appSecret: process.env.ANYFETCH_API_SECRET,
 };
