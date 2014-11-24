@@ -9,7 +9,7 @@ describe("GET /init/connect", function () {
   it("should redirect to PROVIDER", function (done) {
     request(app).get('/init/connect?code=123')
       .expect(302)
-      .expect('Location', /PROVIDER\.com/)
+      .expect('Location', /localhost:8000/)
       .end(done);
   });
 });
