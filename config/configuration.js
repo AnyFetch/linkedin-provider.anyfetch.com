@@ -27,14 +27,16 @@ module.exports = {
 
   // Optional params
 
+  usersConcurrency: process.env.USERS_CONCURRENCY || 1,
+  concurrency: process.env.CONCURRENCY || 1,
+
   providerUrl: process.env.PROVIDER_URL,
   appId: process.env.ANYFETCH_API_ID,
   appSecret: process.env.ANYFETCH_API_SECRET,
 
   opbeat: {
-    organization_id: process.env.OPBEAT_ORGANIZATION_ID,
-    app_id: process.env.OPBEAT_APP_ID,
-    secret_token: process.env.OPBEAT_SECRET_TOKEN,
-    silent: true
+    organizationId: process.env.OPBEAT_ORGANIZATION_ID,
+    appId: process.env.OPBEAT_APP_ID,
+    secretToken: process.env.OPBEAT_SECRET_TOKEN
   }
 };
