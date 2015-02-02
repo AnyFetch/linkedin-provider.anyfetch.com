@@ -7,7 +7,8 @@
   },
   "scripts": {
     "start": "node ./bin/server",
-    "test": "NODE_ENV=test mocha -R spec -t 25000"
+    "test": "NODE_ENV=test mocha -R spec -t 25000",
+    "lint": "jshint bin/ config/ lib/ test/ app.js && jscs bin/ config/ lib/ test/ app.js"
   },
   "main": "./lib/",
   "repository": {
@@ -26,6 +27,8 @@
     "dotenv": "^0.4.0"
   },
   "devDependencies": {
+    "jscs": "^1.10.0",
+    "jshint": "^2.6.0",
     "mocha": "2.0.x",
     "should": "4.3.x",
     "supertest": "0.15.x"
