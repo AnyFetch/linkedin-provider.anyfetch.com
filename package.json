@@ -21,10 +21,11 @@
     "PROVIDER"
   ],
   "dependencies": {
-    "async": "0.9.x",
-    "request": "2.49.x",
     "anyfetch-provider": "^3.0.9",
-    "dotenv": "^0.4.0"
+    "async": "0.9.x",
+    "dotenv": "^0.4.0",
+    "node-linkedin": "^0.3.5",
+    "request": "2.49.x"
   },
   "devDependencies": {
     "jscs": "^1.10.0",

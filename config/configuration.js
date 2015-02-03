@@ -4,7 +4,6 @@
  * Will set the path to Mongo, and applications id
  * Most of the configuration can be done using system environment variables.
  */
-
 // Load environment variables from .env file
 var dotenv = require('dotenv');
 dotenv.load();
@@ -33,6 +32,11 @@ module.exports = {
   providerUrl: process.env.PROVIDER_URL,
   appId: process.env.ANYFETCH_API_ID,
   appSecret: process.env.ANYFETCH_API_SECRET,
+
+  linkedin: {
+    api: process.env.LINKEDIN_API_KEY,
+    secret: process.env.LINKEDIN_SECRET_TOKEN,
+  },
 
   opbeat: {
     organizationId: process.env.OPBEAT_ORGANIZATION_ID,
