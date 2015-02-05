@@ -32,8 +32,8 @@ module.exports = {
   providerUrl: process.env.PROVIDER_URL,
   appId: process.env.ANYFETCH_API_ID,
   appSecret: process.env.ANYFETCH_API_SECRET,
-
   linkedin: {
+    fake: process.env.LINKEDIN_FAKE_ACCESS_TOKEN,
     api: process.env.LINKEDIN_API_KEY,
     secret: process.env.LINKEDIN_SECRET_TOKEN,
   },
