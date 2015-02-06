@@ -22,7 +22,8 @@ LINKEDIN_FAKE_ACCESS_TOKEN="Linkedin fake access token" // FOR TESTING PURPOSES
 # About LINKEDIN_FAKE_ACCESS_TOKEN
 
 Writing tests for a provider can be tricky.
-To test the linkedin we strongly advise you to create a fake linkedin account and to add ONLY yourself to your connections.
+
+To test the linkedin provider we strongly advise you to create a fake linkedin account and to add ONLY yourself to your connections.
 
 Register your app on manager-staging.anyfetch.com, start the server in bin/server, fire up a Redis and MongoDB server and visit this url:
 
@@ -32,13 +33,15 @@ You can get a client id under "Client Id" on this page https://manager-staging.a
 
 After your Linkedin account has been linked to the provider, connect to mongo and find your access_token in the tokens collection under 'data'
 
-You can now add it to your .env file and fire up ````npm test```
+You can now add it to your .env file and fire up ```npm test```
 
 
 # How does it work?
 ## Init
 AnyFetch API will call `/init/connect` with anyfetch authorization code. We will generate a request_token and transparently redirect the user to Linkedin consentment page.
 Linkedin will then call us back on `/init/callback`. We'll check our request_token has been granted approval, and store this.
+
+## Update
 
 To update users contact curl on localhost:800
 
