@@ -45,7 +45,7 @@ Linkedin will then call us back on `/init/callback`. We'll check our request_tok
 
 To update users contact curl on localhost:800
 
-```http://localhost:8000/update?access_token=LINKEDIN_ACCESS_TOKEN&documents_per_update=NUMBER_OF_DOCUMENTS&force=1```
+http://localhost:8000/update?access_token=LINKEDIN_ACCESS_TOKEN&documents_per_update=NUMBER_OF_DOCUMENTS&force=1
 
 
 Support: `support@anyfetch.com`.
