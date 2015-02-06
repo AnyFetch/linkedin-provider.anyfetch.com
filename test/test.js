@@ -32,7 +32,6 @@ describe("Linkedin provider", function() {
     accessToken: config.linkedin.fake,
   };
 
-
   it('can list all connections', function(done) {
     update({access_token: config.linkedin.fake}, null, fakeQueue, function() {
       connexionsPushed.length.should.equal(1);
@@ -46,7 +45,6 @@ describe("Linkedin provider", function() {
       done();
     });
   });
-
 
   it('can upload contacts', function(done) {
     async.map(connexionsPushed, function(contact) {
