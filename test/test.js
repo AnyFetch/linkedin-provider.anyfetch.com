@@ -32,16 +32,16 @@ describe("Linkedin provider", function() {
     accessToken: config.linkedin.fake,
   };
 
-  it('should list all connections', function(done) {
-    update({access_token: config.linkedin.fake}, null, fakeQueue, function() {
-      connectionsPushed.length.should.be.greaterThan(0);
+  it('should list only updated or new connections', function(done) {
+    update({access_token: config.linkedin.fake}, new Date().getTime(), fakeQueue, function() {
+      connectionsPushed.length.should.equal(0);
       done();
     });
   });
 
-  it('should list only updated contacts', function(done) {
-    update({access_token: config.linkedin.fake}, new Date().getTime(), fakeQueue, function() {
-      connectionsPushed.length.should.equal(0);
+  it('should list all connections', function(done) {
+    update({access_token: config.linkedin.fake}, null, fakeQueue, function() {
+      connectionsPushed.length.should.be.greaterThan(0);
       done();
     });
   });
