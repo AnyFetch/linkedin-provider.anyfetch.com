@@ -16,7 +16,8 @@ PROVIDER_URL="https://your-host"
 # AnyFetch app id and secret
 ANYFETCH_API_ID="anyfetch-app-id"
 ANYFETCH_API_SECRET="anyfetch-app-secret"
-LINKEDIN_FAKE_ACCESS_TOKEN="Linkedin fake access token" // FOR TESTING PURPOSES
+# FOR TESTING PURPOSES
+LINKEDIN_FAKE_ACCESS_TOKEN="Linkedin fake access token"
 ```
 
 # About LINKEDIN_FAKE_ACCESS_TOKEN
