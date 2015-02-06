@@ -9,12 +9,12 @@ var uploadContact = require('../lib/helpers/upload.js');
 
 
 describe("Linkedin provider", function() {
-  var connexionsPushed = [];
+  var connectionsPushed = [];
 
   var fakeQueue = {
     addition: {
       push: function(contact) {
-        connexionsPushed.push(contact);
+        connectionsPushed.push(contact);
       }
     }
   };
@@ -25,37 +25,30 @@ describe("Linkedin provider", function() {
       contact.should.have.property('identifier');
       contact.should.have.property('metadata');
       count += 1;
-      if(count === connexionsPushed.length) {
+      if(count === connectionsPushed.length) {
         callback(null);
       }
     },
     accessToken: config.linkedin.fake,
   };
 
-  it('can list all connections', function(done) {
+  it('should list all connections', function(done) {
     update({access_token: config.linkedin.fake}, null, fakeQueue, function() {
-      connexionsPushed.length.should.equal(1);
+      connectionsPushed.length.should.be.greaterThan(0);
       done();
     });
   });
 
-  it('can list only updated contacts', function(done) {
-    update({access_token: config.linkedin.fake}, new Date(), fakeQueue, function() {
-      connexionsPushed.length.should.equal(1);
+  it('should list only updated contacts', function(done) {
+    update({access_token: config.linkedin.fake}, new Date().getTime(), fakeQueue, function() {
+      connectionsPushed.length.should.equal(0);
       done();
     });
   });
 
-  it('can upload contacts', function(done) {
-    async.map(connexionsPushed, function(contact) {
-      uploadContact(contact, fakeClient, config.linkedin.fake, function(err) {
-        if(err) {
-          throw err;
-        }
-        else {
-          done();
-        }
-      });
+  it('should upload contacts', function(done) {
+    async.map(connectionsPushed, function(contact) {
+      uploadContact(contact, fakeClient, config.linkedin.fake, done);
     });
   });
 });
