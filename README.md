@@ -42,10 +42,8 @@ AnyFetch API will call `/init/connect` with anyfetch authorization code. We will
 Linkedin will then call us back on `/init/callback`. We'll check our request_token has been granted approval, and store this.
 
 ## Update
-
-To update users contact curl on localhost:800
+To update a users document list curl on localhost:8000
 
 http://localhost:8000/update?access_token=LINKEDIN_ACCESS_TOKEN&documents_per_update=NUMBER_OF_DOCUMENTS&force=1
-
 
 Support: `support@anyfetch.com`.
