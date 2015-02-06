@@ -1,7 +1,7 @@
 {
-  "name": "anyfetch-PROVIDER_NAME-PROVIDER",
+  "name": "anyfetch-linkedin",
   "version": "0.1.0",
-  "author": "You <you@example.com>",
+  "author": "antoninribeaud@gmail.com",
   "bin": {
     "server": "./bin/server"
   },
@@ -13,18 +13,19 @@
   "main": "./lib/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/YOU/PROVIDER_NAME.provider.example.com"
+    "url": "https://github.com/AnyFetch/linkedin-provider.anyfetch.com"
   },
   "keywords": [
     "anyfetch",
     "provider",
-    "PROVIDER"
+    "linkedin"
   ],
   "dependencies": {
-    "async": "0.9.x",
-    "request": "2.49.x",
     "anyfetch-provider": "^3.0.9",
-    "dotenv": "^0.4.0"
+    "async": "0.9.x",
+    "dotenv": "^0.4.0",
+    "rarity": "^2.1.1",
+    "request": "2.49.x"
   },
   "devDependencies": {
     "jscs": "^1.10.0",
