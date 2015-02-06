@@ -33,14 +33,22 @@ describe("Linkedin provider", function() {
   };
 
 
-  it("can list connections", function(done) {
+  it('can list all connections', function(done) {
+    update({access_token: config.linkedin.fake}, null, fakeQueue, function() {
+      connexionsPushed.length.should.equal(1);
+      done();
+    });
+  });
+
+  it('can list only updated contacts', function(done) {
     update({access_token: config.linkedin.fake}, new Date(), fakeQueue, function() {
       connexionsPushed.length.should.equal(1);
       done();
     });
   });
 
-  it("can upload contacts", function(done) {
+
+  it('can upload contacts', function(done) {
     async.map(connexionsPushed, function(contact) {
       uploadContact(contact, fakeClient, config.linkedin.fake, function(err) {
         if(err) {
