@@ -12,7 +12,7 @@ LINKEDIN_SECRET_TOKEN="linkedin-secret"
 
 # Provider URL, most probably https://your-host
 PROVIDER_URL="https://your-host"
-
+-
 # AnyFetch app id and secret
 ANYFETCH_API_ID="anyfetch-app-id"
 ANYFETCH_API_SECRET="anyfetch-app-secret"
@@ -33,7 +33,7 @@ You can get a client id under "Client Id" on this page https://manager-staging.a
 
 After your Linkedin account has been linked to the provider, connect to mongo and find your access_token in the tokens collection under 'data'
 
-You can now add it to your .env file and fire up ```npm test```
+You can now add it to your .env file and fire up `npm test`
 
 
 # How does it work?
