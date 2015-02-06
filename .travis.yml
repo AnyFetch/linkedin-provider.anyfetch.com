@@ -8,3 +8,5 @@ script:
 env:
   global:
     - PROVIDER_URL="http://localhost:8000"
+    - ANYFETCH_API_ID="ANYFETCH-ID"
+    - ANYFETCH_API_SECRET="ANYFETCH-SECRET"
