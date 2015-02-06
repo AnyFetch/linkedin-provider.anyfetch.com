@@ -24,7 +24,7 @@ describe("Linkedin provider", function() {
     postDocument: function(contact, callback) {
       contact.should.have.property('identifier');
       contact.should.have.property('metadata');
-      count++;
+      count += 1;
       if(count === connexionsPushed.length) {
         callback(null);
       }
