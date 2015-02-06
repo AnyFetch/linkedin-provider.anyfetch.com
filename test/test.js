@@ -8,7 +8,7 @@ var config = require('../config/configuration.js');
 var uploadContact = require('../lib/helpers/upload.js');
 
 
-describe("Linkedin provider", function() {
+describe("Linkedin provider fetch and update", function() {
   var connectionsPushed = [];
 
   var fakeQueue = {
@@ -33,16 +33,16 @@ describe("Linkedin provider", function() {
   };
 
   it('should list only updated or new connections', function(done) {
-    update({access_token: config.linkedin.fake}, new Date().getTime(), fakeQueue, function() {
+    update({access_token: config.linkedin.fake}, new Date().getTime(), fakeQueue, function(err) {
       connectionsPushed.length.should.equal(0);
-      done();
+      done(err);
     });
   });
 
   it('should list all connections', function(done) {
-    update({access_token: config.linkedin.fake}, null, fakeQueue, function() {
+    update({access_token: config.linkedin.fake}, null, fakeQueue, function(err) {
       connectionsPushed.length.should.be.greaterThan(0);
-      done();
+      done(err);
     });
   });
 
