@@ -44,6 +44,6 @@ Linkedin will then call us back on `/init/callback`. We'll check our request_tok
 ## Update
 To update a users document list curl on localhost:8000
 
-http://localhost:8000/update?access_token=LINKEDIN_ACCESS_TOKEN&documents_per_update=NUMBER_OF_DOCUMENTS&force=1
+http://localhost:8000/update?access_token=ANYFETCH_ACCESS_TOKEN&documents_per_update=NUMBER_OF_DOCUMENTS&force=1
 
 Support: `support@anyfetch.com`.
