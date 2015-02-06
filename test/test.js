@@ -1,14 +1,14 @@
 'use strict';
 
 require('should');
-var request = require('supertest');
 var async = require('async');
 
 var update = require('../lib/update.js');
 var config = require('../config/configuration.js');
+var uploadContact = require('../lib/helpers/upload.js');
 
 
-describe("Retrieve connexions", function() {
+describe("Linkedin provider", function() {
   var connexionsPushed = [];
 
   var fakeQueue = {
@@ -17,13 +17,39 @@ describe("Retrieve connexions", function() {
         connexionsPushed.push(contact);
       }
     }
-
   };
 
-  it("Can list connections", function(done) {
+  var count = 0;
+  var fakeClient = {
+    postDocument: function(contact, callback) {
+      contact.should.have.property('identifier');
+      contact.should.have.property('metadata');
+      count++;
+      if(count === connexionsPushed.length) {
+        callback(null);
+      }
+    },
+    accessToken: config.linkedin.fake,
+  };
+
+
+  it("can list connections", function(done) {
     update({access_token: config.linkedin.fake}, new Date(), fakeQueue, function() {
-      connexionsPushed.length.should.equal(177);
+      connexionsPushed.length.should.equal(1);
       done();
+    });
+  });
+
+  it("can upload contacts", function(done) {
+    async.map(connexionsPushed, function(contact) {
+      uploadContact(contact, fakeClient, config.linkedin.fake, function(err) {
+        if(err) {
+          throw err;
+        }
+        else {
+          done();
+        }
+      });
     });
   });
 });
