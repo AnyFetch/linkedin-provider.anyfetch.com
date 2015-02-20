@@ -24,8 +24,10 @@ module.exports = {
   env: nodeEnv,
   port: process.env.PORT || defaultPort,
 
-  // Optional params
+  mongoUrl: process.env.MONGO_URL || process.env.MONGOLAB_URI,
+  redisUrl: process.env.REDIS_URL || process.env.REDISCLOUD_URL,
 
+  // Optional params
   usersConcurrency: process.env.USERS_CONCURRENCY || 1,
   concurrency: process.env.CONCURRENCY || 1,
 
