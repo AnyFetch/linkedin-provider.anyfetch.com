@@ -36,8 +36,8 @@ module.exports = {
   appSecret: process.env.ANYFETCH_API_SECRET,
   linkedin: {
     fake: process.env.LINKEDIN_FAKE_ACCESS_TOKEN,
-    api: process.env.LINKEDIN_API_KEY,
-    secret: process.env.LINKEDIN_SECRET_TOKEN,
+    api: process.env.LINKEDIN_API_ID,
+    secret: process.env.LINKEDIN_API_SECRET,
   },
 
   opbeat: {
