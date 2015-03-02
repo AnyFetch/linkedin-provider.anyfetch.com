@@ -33,14 +33,14 @@ describe("Linkedin provider fetch and update", function() {
   };
 
   it('should list only updated or new connections', function(done) {
-    update({access_token: config.linkedin.fake}, new Date().getTime(), fakeQueue, function(err) {
+    update({accessToken: config.linkedin.fake}, new Date().getTime(), fakeQueue, function(err) {
       connectionsPushed.length.should.equal(0);
       done(err);
     });
   });
 
   it('should list all connections', function(done) {
-    update({access_token: config.linkedin.fake}, null, fakeQueue, function(err) {
+    update({accessToken: config.linkedin.fake}, null, fakeQueue, function(err) {
       connectionsPushed.length.should.be.greaterThan(0);
       done(err);
     });
